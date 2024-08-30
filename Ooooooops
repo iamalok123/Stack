@@ -1,0 +1,82 @@
+
+public class OperatorDemo {
+
+    public static void main(String[] args) {
+        // 1. Arithmetic Operators
+        int a = 10, b = 5;
+        System.out.println("Arithmetic Operators:");
+        System.out.println("a + b = " + (a + b));  // Addition
+        System.out.println("a - b = " + (a - b));  // Subtraction
+        System.out.println("a * b = " + (a * b));  // Multiplication
+        System.out.println("a / b = " + (a / b));  // Division
+        System.out.println("a % b = " + (a % b));  // Modulus
+
+        // 2. Arithmetic Assignment Operators
+        System.out.println("\nArithmetic Assignment Operators:");
+        a += 2; // equivalent to a = a + 2
+        System.out.println("a += 2 -> a = " + a);
+        a -= 2; // equivalent to a = a - 2
+        System.out.println("a -= 2 -> a = " + a);
+        a *= 2; // equivalent to a = a * 2
+        System.out.println("a *= 2 -> a = " + a);
+        a /= 2; // equivalent to a = a / 2
+        System.out.println("a /= 2 -> a = " + a);
+        a %= 2; // equivalent to a = a % 2
+        System.out.println("a %= 2 -> a = " + a);
+
+        // 3. Increment & Decrement Operators
+        System.out.println("\nIncrement & Decrement Operators:");
+        a = 5;
+        System.out.println("Initial a = " + a);
+        System.out.println("++a = " + ++a); // Pre-increment
+        System.out.println("a++ = " + a++); // Post-increment
+        System.out.println("Final a after a++ = " + a);
+        System.out.println("--a = " + --a); // Pre-decrement
+        System.out.println("a-- = " + a--); // Post-decrement
+        System.out.println("Final a after a-- = " + a);
+
+        // 4. Bitwise Operators
+        int x = 6, y = 4; // In binary: 6 = 0110, 4 = 0100
+        System.out.println("\nBitwise Operators:");
+        System.out.println("x & y = " + (x & y)); // AND
+        System.out.println("x | y = " + (x | y)); // OR
+        System.out.println("x ^ y = " + (x ^ y)); // XOR
+        System.out.println("~x = " + ~x);         // NOT
+        System.out.println("x << 1 = " + (x << 1)); // Left Shift
+        System.out.println("x >> 1 = " + (x >> 1)); // Right Shift
+
+        // 5. Relational Operators
+        System.out.println("\nRelational Operators:");
+        System.out.println("a == b = " + (a == b)); // Equal to
+        System.out.println("a != b = " + (a != b)); // Not equal to
+        System.out.println("a > b = " + (a > b));   // Greater than
+        System.out.println("a < b = " + (a < b));   // Less than
+        System.out.println("a >= b = " + (a >= b)); // Greater than or equal to
+        System.out.println("a <= b = " + (a <= b)); // Less than or equal to
+
+        // 6. Boolean Logical Operators & Short Circuit Logical Operators
+        boolean p = true, q = false;
+        System.out.println("\nBoolean Logical & Short Circuit Logical Operators:");
+        System.out.println("p & q = " + (p & q));   // Logical AND
+        System.out.println("p | q = " + (p | q));   // Logical OR
+        System.out.println("p ^ q = " + (p ^ q));   // Logical XOR
+        System.out.println("!p = " + (!p));         // Logical NOT
+        System.out.println("p && q = " + (p && q)); // Short-circuit AND
+        System.out.println("p || q = " + (p || q)); // Short-circuit OR
+
+        // 7. Ternary Operator
+        int max = (a > b) ? a : b;
+        System.out.println("\nTernary Operator:");
+        System.out.println("Max of a and b = " + max);
+
+        // 8. Type Casting & Type Conversion
+        System.out.println("\nType Casting & Type Conversion:");
+        double d = 9.78;
+        int i = (int) d;  // Explicit type casting
+        System.out.println("Explicit type casting (double to int): " + i);
+
+        int j = 100;
+        double e = j;  // Implicit type conversion
+        System.out.println("Implicit type conversion (int to double): " + e);
+    }
+}
