@@ -1,0 +1,50 @@
+public class Car {
+    private String carName;
+    private String carType;
+    private Engine engine;
+
+    public Car(String carName, String carType) {
+        this.carName = carName;
+        this.carType = carType;
+        this.engine = new Engine();
+        this.engine.setEngineType();
+    }
+
+    // Inner class Engine
+    public class Engine {
+        private String engineType;
+
+        private void setEngineType() {
+            // Logic to set engine type based on car name and type
+            if ("SUV".equalsIgnoreCase(carType) || "Truck".equalsIgnoreCase(carName)) {
+                this.engineType = "Bigger";
+            } else {
+                this.engineType = "Smaller";
+            }
+        }
+
+        public String getEngineType() {
+            return engineType;
+        }
+    }
+
+    public String getCarName() {
+        return carName;
+    }
+
+    public String getCarType() {
+        return carType;
+    }
+
+    public String getEngineType() {
+        return engine.getEngineType();
+    }
+
+    public static void main(String[] args) {
+        Car car1 = new Car("Sedan", "Compact");
+        System.out.println("Car: " + car1.getCarName() + ", Type: " + car1.getCarType() + ", Engine: " + car1.getEngineType());
+
+        Car car2 = new Car("Truck", "Heavy");
+        System.out.println("Car: " + car2.getCarName() + ", Type: " + car2.getCarType() + ", Engine: " + car2.getEngineType());
+    }
+}
